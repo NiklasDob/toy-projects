@@ -1,0 +1,8 @@
+#Auto
+# Zustände beschleunigen 1, abbremsen -1, crash = -10
+
+# wenn v > weg zu vorgehendem Auto = abbremsen sonst beschleunigen
+# wenn auto zum ende dann neues Auto am anfang
+# v + zustand von vorherigem auto sonst v+1(zustand beschleunigen) (sichtweite 3)
+# jede generation neues auto am anfang mit 1 < v < 3
+# wenn v > weg zu vorgehendem Auto crash alle anderen v=1, crash bleibt für 2 generationen
