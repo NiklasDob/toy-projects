@@ -5,7 +5,7 @@ class Game:
         self.width = width
         self.height = height
         self.generation = 0
-        spawnRate = float(raw_input("Verkehr: "))
+        spawnRate = float(raw_input("Verkehr (0,1): "))
         self.map = [[Car(random.randint(0,5),(y,x),width,height, random.random()) if random.random() < spawnRate else "-" for x in range(0,self.width)] for y in range(0,self.height)]
         self.newMap = [[ "-" for x in range(0,self.width)] for y in range(0,self.height)]
 
@@ -169,7 +169,7 @@ class Car:
         #troedeln
         self.applyRule3()
         #spur wechseln
-        # self.applyRule4()
+        # self.applyRule4(oldMap, newMap)
         #bewegen
         self.applyRule5(oldMap,newMap)
     #Die Zelle updated ihren State nach den Regeln
